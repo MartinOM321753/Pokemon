@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(185, 185, 185);
+
+    }
+
+    .main {
+
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    .contcards {
+        width: 80%;
+        height: 700px;
+        display: grid;
+        padding: 10px 10px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 295px));
+        gap: 25px;
+        background-color: rgb(219, 173, 117);
+        overflow: scroll;
+
+    }
+
+
+    .pokedex {
+
+        width: 500px;
+        height: 700px;
+        background-color: rgb(225, 19, 19);
+        padding-top: 10px;
+        border-radius: 10px;
+        border: solid black 3px;
+        margin-right: 10px;
+
+    }
+
+    .contpokemon {
+        width: 90%;
+        height: 250px;
+        background-color: rgb(253, 253, 253);
+        margin: auto;
+        border-radius: 10px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+    .contpokemon2 {
+        width: 90%;
+        height: 250px;
+        background-color: rgb(253, 253, 253);
+        margin: auto;
+        border-radius: 10px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .contpokemonbord {
+        width: 90%;
+        height: 280px;
+        background-color: rgb(155, 155, 155);
+        margin: auto;
+        border-radius: 10px;
+        padding-top: 20px;
+        border: solid black;
+
+
+    }
+
+    .circulo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50px;
+        background-color: aqua;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: black solid 1px;
+        box-shadow: -2px 3px 3px rgb(237, 234, 234);
+    }
+
+    .circulosr {
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        background-color: rgb(201, 38, 38);
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: black solid 1px;
+        box-shadow: -2px 3px 3px rgb(237, 234, 234);
+    }
+
+    .circulosa {
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        background-color: rgb(255, 239, 10);
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: black solid 1px;
+        box-shadow: -2px 3px 3px rgb(237, 234, 234);
+    }
+
+    .circulosv {
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        background-color: rgb(5, 142, 44);
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: black solid 1px;
+        box-shadow: -2px 3px 3px rgb(237, 234, 234);
+    }
+
+    .contcicle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        z-index: 1;
+        position: relative;
+
+    }
+    .contcicle2 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        z-index: 1;
+        position: relative;
+        margin-top: 40%;
+
+    }
+
+    .circledawn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: rgb(73, 74, 137);
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border: black solid 1px;
+        box-shadow: -2px 3px 3px rgb(237, 234, 234);
+    }
+
+    .linedawnv {
+        width: 80px;
+        height: 20px;
+        border-radius: 50px;
+        background-color: rgb(5, 248, 21);
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border: black solid 1px;
+        box-shadow: -2px 3px 3px rgb(237, 234, 234);
+    }
+
+    .linedawna {
+        width: 80px;
+        height: 20px;
+        border-radius: 50px;
+        background-color: rgb(252, 235, 2);
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border: black solid 1px;
+        box-shadow: -2px 3px 3px rgb(237, 234, 234);
+    }
+
+    .linedawnsearch {
+        width: 60%;
+        height: 50px;
+        border-radius: 50px;
+        background-color: rgb(251, 197, 3);
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border: black solid 1px;
+        color: rgb(246, 247, 247);
+
+    }
+
+    .circledawn2 {
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: rgb(192, 44, 15);
+        margin-left: 30px;
+        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border: black solid 1px;
+        box-shadow: 1px 5px 1px rgb(12, 12, 12);
+
+    }
+
+    .img_pokemon {
+width: 200px;
+
+    }
+
+    .datos {
+        margin-top: -100px;
+        margin-left: 50px;
+
+    }
+
+    .nombre {
+        margin-top: -40px;
+        font-size: 30px;
+        margin-left: 60px;
+    }
+
+    .nombre2 {
+        font-size: 30px;
+        margin-left: 60px;
+    }
+    .space{
+
+        margin-right: 5px;
+        font-weight: 700;
+    }
+    .space2{
+
+margin-right: 80px;
+font-weight: 700;
+}
+.img_pokemon2{
+    position: relative;
+    width: 200px;
+    margin-top: -30px;
+}
+
+
+</style>
+
+
+
+<body>
+
+    <main class="main">
+
+        <div class="pokedex">
+            <div class="contcicle">
+                <div class="circulo"></div>
+                <div class="circulosr"></div>
+                <div class="circulosa"></div>
+                <div class="circulosv"></div>
+            </div>
+            <div class="contpokemonbord">
+
+                <div class="contpokemon">
+                    <img src="" alt="img" id="imgpoke" class="img_pokemon">
+
+                    <p class="nombre" id="name"></p>
+
+
+                </div>
+                <div class="datos">
+                    <div class="contcicle">
+                        <p>Altura:</p>
+                        <p id="altura"></p>
+                    </div>
+
+                    <div class="contcicle">
+                        <p>Peso:</p>
+                        <p id="peso"></p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="contcicle">
+                <div class="circledawn"></div>
+                <div class="linedawnv"></div>
+                <div class="linedawna"></div>
+
+            </div>
+
+
+            <div class="contcicle">
+                <input type="text" class="linedawnsearch" id="busqueda" placeholder="Busca tu pokemon">
+                <button class="circledawn2" onclick="traerpokemon()"></button>
+
+
+            </div>
+        </div>
+
+
+        <div class="contcards">
+
+        </div>
+
+    </main>
+
+</body>
+
+
+<script>
+
+
+
+
+
+    function traerpokemon() {
+
+        const numero = Math.floor(Math.random() * 500) + 1;
+
+
+        fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`)
+            .then(response => {
+
+                return response.json();
+            }).then(data => {
+
+                const imgpokemon = document.getElementById("imgpoke");
+                const peso = document.getElementById("peso");
+                const name = document.getElementById("name");
+                const altura = document.getElementById("altura");
+                imgpokemon.src = data.sprites.front_default
+                peso.innerText = data.weight;
+                name.innerText = data.name;
+                altura.innerText = data.height;
+
+                const contcards = document.querySelector('.contcards');
+
+                // Crear una nueva tarjeta (card)
+                const nuevaCard = document.createElement('div');
+                nuevaCard.className = 'contpokemonbord';
+
+                // Contenido de la nueva tarjeta
+                nuevaCard.innerHTML = `
+                    <div class="contpokemon2">
+                        <p class="nombre2">${data.name}</p>
+                        <img src="${data.sprites.front_default}" alt="img" class="img_pokemon2">
+                    </div>
+                    <div class="datos">
+                        <div class="contcicle2">
+                            <p class="space">Altura:</p>
+                            <p class="space2">${data.height}</p>
+                       
+                            <p class="space">Peso:</p>
+                            <p class="space2">${data.weight}</p>
+                        </div>
+                    </div>
+                `;
+
+                // Agregar la nueva tarjeta al contenedor de tarjetas
+                contcards.appendChild(nuevaCard);
+
+
+
+
+            }).catch(error => {
+
+                console.log(error);
+            })
+
+    }
+    document.addEventListener('DOMContentLoaded', traerpokemon);
+
+
+
+</script>
+
+</html>
